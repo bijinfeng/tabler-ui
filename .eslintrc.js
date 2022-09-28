@@ -1,21 +1,14 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true
+  env: {
+    browser: true,
+    es2021: true,
   },
-  "extends": [
-    "airbnb",
-    "standard-with-typescript"
-  ],
-  "overrides": [
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+  extends: ['airbnb', 'prettier', 'plugin:import/typescript'],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  "plugins": [
-    "react"
-  ],
-  "rules": {
-  }
-}
+  plugins: ['react'],
+  rules: {},
+};
