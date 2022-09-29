@@ -1,7 +1,6 @@
-
 /** @format */
 
-import {Component, h, Prop} from '@stencil/core'
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'tabler-button',
@@ -9,30 +8,30 @@ import {Component, h, Prop} from '@stencil/core'
 })
 export class TablerButton {
   /** 类型 */
-  @Prop() type = 'primary'
+  @Prop() type = 'primary';
 
   /** 是否朴素按钮 */
-  @Prop() plain = false
+  @Prop() plain = false;
 
   /** 是否圆角按钮 */
-  @Prop() round = false
+  @Prop() round = false;
 
   /** 图标类名 */
-  @Prop() icon: string
+  @Prop() icon: string;
 
   /** 是否圆形按钮 */
-  @Prop() circle = false
+  @Prop() circle = false;
 
   /** 是否禁用状态 */
-  @Prop() disabled = false
+  @Prop() disabled = false;
 
-  @Prop() size = 'default'
+  @Prop() size = 'default';
 
   /** 是否独占一行 */
-  @Prop() block = false
+  @Prop() block = false;
 
   /** loading */
-  @Prop() loading = false
+  @Prop() loading = false;
 
   render() {
     return (
@@ -47,13 +46,14 @@ export class TablerButton {
           'is-block': this.block,
           'is-loading': this.loading,
         }}
-        disabled={this.disabled || this.loading}>
+        disabled={this.disabled || this.loading}
+      >
         {this.loading && <tabler-loading class="tabler-button_icon tabler-button_loading_icon"></tabler-loading>}
         {this.icon && <tabler-icon name={this.icon} class="tabler-button_icon"></tabler-icon>}
         <span class="tabler-icon_content">
           <slot></slot>
         </span>
       </button>
-    )
+    );
   }
 }

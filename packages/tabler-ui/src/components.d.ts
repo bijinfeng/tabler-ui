@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface TablerBadget {
+        /**
+          * 类型
+         */
+        "type": string;
+    }
     interface TablerButton {
         /**
           * 是否独占一行
@@ -48,6 +54,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLTablerBadgetElement extends Components.TablerBadget, HTMLStencilElement {
+    }
+    var HTMLTablerBadgetElement: {
+        prototype: HTMLTablerBadgetElement;
+        new (): HTMLTablerBadgetElement;
+    };
     interface HTMLTablerButtonElement extends Components.TablerButton, HTMLStencilElement {
     }
     var HTMLTablerButtonElement: {
@@ -61,11 +73,18 @@ declare global {
         new (): HTMLTablerCheckboxElement;
     };
     interface HTMLElementTagNameMap {
+        "tabler-badget": HTMLTablerBadgetElement;
         "tabler-button": HTMLTablerButtonElement;
         "tabler-checkbox": HTMLTablerCheckboxElement;
     }
 }
 declare namespace LocalJSX {
+    interface TablerBadget {
+        /**
+          * 类型
+         */
+        "type"?: string;
+    }
     interface TablerButton {
         /**
           * 是否独占一行
@@ -107,6 +126,7 @@ declare namespace LocalJSX {
         "label"?: string;
     }
     interface IntrinsicElements {
+        "tabler-badget": TablerBadget;
         "tabler-button": TablerButton;
         "tabler-checkbox": TablerCheckbox;
     }
@@ -115,6 +135,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "tabler-badget": LocalJSX.TablerBadget & JSXBase.HTMLAttributes<HTMLTablerBadgetElement>;
             "tabler-button": LocalJSX.TablerButton & JSXBase.HTMLAttributes<HTMLTablerButtonElement>;
             "tabler-checkbox": LocalJSX.TablerCheckbox & JSXBase.HTMLAttributes<HTMLTablerCheckboxElement>;
         }

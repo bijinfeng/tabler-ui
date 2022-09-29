@@ -1804,7 +1804,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@stencil/core@^2.13.0":
+"@stencil/core@^2.18.0":
   version "2.18.0"
   resolved "https://registry.npmjs.org/@stencil/core/-/core-2.18.0.tgz#2556b0f8d1fb6f2c06c3fb22de495d59ca7daf05"
   integrity sha512-NLEY8Jq59smyiivBAxHKipsp9YkkW/K/Vm90zAyXQqukb12i2SFucWHJ1Ik7ropVlhmMVvigyxXgRfQ9quIqtg==
@@ -1813,6 +1813,11 @@
   version "0.3.1"
   resolved "https://registry.npmjs.org/@stencil/react-output-target/-/react-output-target-0.3.1.tgz#dc9cc2fea32d0e30474a87fcb2a447f90ab78696"
   integrity sha512-6d9pPhyajFfdxkqU/pPP2SzI7wn+EklySQc4KXlI/xcdvC2H9BzLmhmR40fR1q2TQoJbJui/nvSWhbYqkE3OBQ==
+
+"@stencil/sass@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@stencil/sass/-/sass-2.0.0.tgz#50e01adf6c96adb059d15b34d4d3f90f390d8a25"
+  integrity sha512-Be7Tz7YJnMzloot0aG3m2wTVt9Dg0rjOU+ZVx49ts9+hyeW+NEmvSWPv6bhypblRXbSGik2Cc3AYboTma4Qpgg==
 
 "@stencil/vue-output-target@^0.6.2":
   version "0.6.2"
@@ -2027,19 +2032,12 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react-dom@^16.9.8":
+"@types/react-dom@^16.7.0", "@types/react-dom@^16.9.8", "@types/react-dom@^17.0.2":
   version "16.9.16"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.9.16.tgz#c591f2ed1c6f32e9759dfa6eb4abfd8041f29e39"
   integrity sha512-Oqc0RY4fggGA3ltEgyPLc3IV9T73IGoWjkONbsyJ3ZBn+UPPCYpU2ec0i3cEbJuEdZtkqcCF2l1zf2pBdgUGSg==
   dependencies:
     "@types/react" "^16"
-
-"@types/react-dom@^17.0.11":
-  version "17.0.17"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.17.tgz#2e3743277a793a96a99f1bf87614598289da68a1"
-  integrity sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==
-  dependencies:
-    "@types/react" "^17"
 
 "@types/react-router-config@5.0.2":
   version "5.0.2"
@@ -2084,28 +2082,10 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*":
-  version "18.0.21"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.21.tgz#b8209e9626bb00a34c76f55482697edd2b43cc67"
-  integrity sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^16", "@types/react@^16.9.43":
+"@types/react@*", "@types/react@^16", "@types/react@^16.7.0", "@types/react@^16.9.43", "@types/react@^17.0.2":
   version "16.14.32"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.14.32.tgz#d4e4fe5ece3c27fcb4608b1f4a614f7dec881392"
   integrity sha512-hvEy4vGVADbtj/U6+CA5SRC5QFIjdxD7JslAie8EuAYZwhYY9bgforpXNyF1VFzhnkEOesDy1278t1wdjN74cw==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^17", "@types/react@^17.0.34":
-  version "17.0.50"
-  resolved "https://registry.npmjs.org/@types/react/-/react-17.0.50.tgz#39abb4f7098f546cfcd6b51207c90c4295ee81fc"
-  integrity sha512-ZCBHzpDb5skMnc1zFXAXnL3l1FAdi+xZvwxK+PkglMmBrwjpp9nKaWuEvrGnSifCJmBFGxZOOFuwC6KH/s0NuA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -12354,7 +12334,7 @@ react-docgen-typescript-dumi-tmp@^1.22.1-0:
   resolved "https://registry.npmjs.org/react-docgen-typescript-dumi-tmp/-/react-docgen-typescript-dumi-tmp-1.22.1-0.tgz#6f452de05c5c114a6e1dd60b34930afaa7ae39a0"
   integrity sha512-wjuAm1yj+ZZucovow2VF0MXkH2SGZ+squZxfNdnam3oyUbHy/xZaU1ZabCn7rY+13ZFx0/NLda+ZuBgF3g8vBA==
 
-react-dom@16.x:
+react-dom@16.x, react-dom@^16.7.0, react-dom@^17.0.2:
   version "16.14.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
@@ -12363,15 +12343,6 @@ react-dom@16.x:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
-
-react-dom@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
-  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    scheduler "^0.20.2"
 
 react-error-boundary@^3.1.4:
   version "3.1.4"
@@ -12431,7 +12402,7 @@ react-router@5.2.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react@16.x:
+react@16.x, react@^16.7.0, react@^17.0.2:
   version "16.14.0"
   resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
@@ -12439,14 +12410,6 @@ react@16.x:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-
-react@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
-  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 read-cmd-shim@^3.0.0:
   version "3.0.1"
@@ -13149,14 +13112,6 @@ scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
   integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-scheduler@^0.20.2:
-  version "0.20.2"
-  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
-  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

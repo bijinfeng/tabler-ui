@@ -9,7 +9,11 @@
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": true,
-    "lib": ["es6"]
+    "lib": ["es6"],
+    "paths": {
+      "@kebai/tabler-react": ["./packages/tabler-react/src"],
+      "@kebai/tabler-ui": ["./packages/tabler-ui"],
+    }
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/__tests__/**"]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/__tests__/**"],
 }

@@ -8,6 +8,11 @@ import type { JSX } from '@kebai/tabler-ui';
 
 
 
+export const TablerBadget = /*@__PURE__*/ defineContainer<JSX.TablerBadget>('tabler-badget', undefined, [
+  'type'
+]);
+
+
 export const TablerButton = /*@__PURE__*/ defineContainer<JSX.TablerButton>('tabler-button', undefined, [
   'type',
   'plain',
