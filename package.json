@@ -37,7 +37,8 @@
   "scripts": {
     "prepare": "husky install",
     "start": "dumi dev",
-    "docs:build": "dumi build"
+    "docs:build": "dumi build",
+    "repo:build": "lerna run build --scope=@kebai/tabler-ui"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
