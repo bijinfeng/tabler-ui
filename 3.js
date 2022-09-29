@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[3],{khEB:function(t,r,e){"use strict";e.r(r),e.d(r,"tabler_badget",(function(){return c}));var n=e("FmQi"),s="",c=class{constructor(t){Object(n["d"])(this,t),this.type="primary"}render(){return Object(n["b"])("div",null)}};c.style=s}}]);
