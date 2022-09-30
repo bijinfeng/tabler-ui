@@ -8,8 +8,26 @@ import type { JSX } from '@kebai/tabler-ui';
 
 
 
-export const TablerBadget = /*@__PURE__*/ defineContainer<JSX.TablerBadget>('tabler-badget', undefined, [
-  'type'
+export const ConfigProvider = /*@__PURE__*/ defineContainer<JSX.ConfigProvider>('config-provider', undefined, [
+  'prefixCls'
+]);
+
+
+export const ContextConsumer = /*@__PURE__*/ defineContainer<JSX.ContextConsumer>('context-consumer', undefined, [
+  'context',
+  'renderer',
+  'subscribe'
+]);
+
+
+export const TablerBadge = /*@__PURE__*/ defineContainer<JSX.TablerBadge>('tabler-badge', undefined, [
+  'prefixCls',
+  'color',
+  'outline',
+  'pill',
+  'light',
+  'href',
+  'target'
 ]);
 
 

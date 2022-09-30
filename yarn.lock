@@ -1819,6 +1819,11 @@
   resolved "https://registry.npmjs.org/@stencil/sass/-/sass-2.0.0.tgz#50e01adf6c96adb059d15b34d4d3f90f390d8a25"
   integrity sha512-Be7Tz7YJnMzloot0aG3m2wTVt9Dg0rjOU+ZVx49ts9+hyeW+NEmvSWPv6bhypblRXbSGik2Cc3AYboTma4Qpgg==
 
+"@stencil/state-tunnel@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@stencil/state-tunnel/-/state-tunnel-1.0.1.tgz#21324f494ad719732505c8134099e415ac4c3c81"
+  integrity sha512-DYG8uROgL9hkjVTCtCfRBb0d3FwpiFB0muRrNZQ2X1Qo5hxMuNNji76/ILddqeq0AfgkKCW82xrMPDpy+rNIhQ==
+
 "@stencil/vue-output-target@^0.6.2":
   version "0.6.2"
   resolved "https://registry.npmjs.org/@stencil/vue-output-target/-/vue-output-target-0.6.2.tgz#4674cd391f7ae77e250f0159be85d535aacbbdde"
@@ -3960,7 +3965,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.x, classnames@^2.2.1, classnames@^2.2.6:
+classnames@2.x, classnames@^2.2.1, classnames@^2.2.6, classnames@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==

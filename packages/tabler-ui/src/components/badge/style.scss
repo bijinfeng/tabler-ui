@@ -1,0 +1,77 @@
+//badges
+$badge-font-size: 12px !default;
+$badge-line-height: 12px !default;
+$badge-font-weight: 600 !default;
+$badge-padding-y: .25em !default;
+$badge-padding-x: .5em !default;
+$badge-empty-size: .5rem !default;
+
+$base-cls: #{$prefix}badge;
+
+.#{$base-cls} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $gray-500;
+  border: $border-width solid transparent;
+  font-size: $badge-font-size;
+  min-width: $badge-font-size;
+  font-weight: $badge-font-weight;
+  letter-spacing: .04em;
+  vertical-align: bottom;
+  padding: 3px 6px;
+  line-height: 1;
+  color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:empty {
+    width: $badge-empty-size;
+    height: $badge-empty-size;
+    min-width: 0;
+    min-height: auto;
+    padding: 0;
+    border-radius: $border-radius-pill;
+    vertical-align: baseline;
+  }
+
+  // colors
+  @each $color, $value in $extra-colors {
+    &-#{"" + $color} {
+      background-color: $value;
+
+      &.#{$base-cls}-outline {
+        color: $value;
+      }
+
+      &.#{$base-cls}-lt {
+        color: $value;
+        background: rgba($value, .1);
+      }
+    }
+  }
+
+  &-sm {
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+    padding: 0 .25rem;
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: $border-width solid currentColor;
+  }
+
+  &-pill {
+    border-radius: $border-radius-pill;
+  }
+
+  .#{$base-cls}-link {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

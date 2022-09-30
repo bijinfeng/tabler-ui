@@ -5,12 +5,28 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { BadgetColor } from "./components/badge/types";
 export namespace Components {
-    interface TablerBadget {
+    interface ConfigProvider {
+        "prefixCls": string;
+    }
+    interface TablerBadge {
         /**
-          * 类型
+          * 标签颜色
          */
-        "type": string;
+        "color": BadgetColor;
+        /**
+          * 点击跳转的地址，指定此属性按钮的行为和 a 链接一致
+         */
+        "href": string;
+        "light": boolean;
+        "outline": boolean;
+        "pill": boolean;
+        "prefixCls": string;
+        /**
+          * 相当于 a 链接的 `target` 属性，`href` 存在时生效
+         */
+        "target": string;
     }
     interface TablerButton {
         /**
@@ -54,11 +70,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLTablerBadgetElement extends Components.TablerBadget, HTMLStencilElement {
+    interface HTMLConfigProviderElement extends Components.ConfigProvider, HTMLStencilElement {
     }
-    var HTMLTablerBadgetElement: {
-        prototype: HTMLTablerBadgetElement;
-        new (): HTMLTablerBadgetElement;
+    var HTMLConfigProviderElement: {
+        prototype: HTMLConfigProviderElement;
+        new (): HTMLConfigProviderElement;
+    };
+    interface HTMLTablerBadgeElement extends Components.TablerBadge, HTMLStencilElement {
+    }
+    var HTMLTablerBadgeElement: {
+        prototype: HTMLTablerBadgeElement;
+        new (): HTMLTablerBadgeElement;
     };
     interface HTMLTablerButtonElement extends Components.TablerButton, HTMLStencilElement {
     }
@@ -73,17 +95,33 @@ declare global {
         new (): HTMLTablerCheckboxElement;
     };
     interface HTMLElementTagNameMap {
-        "tabler-badget": HTMLTablerBadgetElement;
+        "config-provider": HTMLConfigProviderElement;
+        "tabler-badge": HTMLTablerBadgeElement;
         "tabler-button": HTMLTablerButtonElement;
         "tabler-checkbox": HTMLTablerCheckboxElement;
     }
 }
 declare namespace LocalJSX {
-    interface TablerBadget {
+    interface ConfigProvider {
+        "prefixCls"?: string;
+    }
+    interface TablerBadge {
         /**
-          * 类型
+          * 标签颜色
          */
-        "type"?: string;
+        "color"?: BadgetColor;
+        /**
+          * 点击跳转的地址，指定此属性按钮的行为和 a 链接一致
+         */
+        "href"?: string;
+        "light"?: boolean;
+        "outline"?: boolean;
+        "pill"?: boolean;
+        "prefixCls"?: string;
+        /**
+          * 相当于 a 链接的 `target` 属性，`href` 存在时生效
+         */
+        "target"?: string;
     }
     interface TablerButton {
         /**
@@ -126,7 +164,8 @@ declare namespace LocalJSX {
         "label"?: string;
     }
     interface IntrinsicElements {
-        "tabler-badget": TablerBadget;
+        "config-provider": ConfigProvider;
+        "tabler-badge": TablerBadge;
         "tabler-button": TablerButton;
         "tabler-checkbox": TablerCheckbox;
     }
@@ -135,7 +174,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "tabler-badget": LocalJSX.TablerBadget & JSXBase.HTMLAttributes<HTMLTablerBadgetElement>;
+            "config-provider": LocalJSX.ConfigProvider & JSXBase.HTMLAttributes<HTMLConfigProviderElement>;
+            "tabler-badge": LocalJSX.TablerBadge & JSXBase.HTMLAttributes<HTMLTablerBadgeElement>;
             "tabler-button": LocalJSX.TablerButton & JSXBase.HTMLAttributes<HTMLTablerButtonElement>;
             "tabler-checkbox": LocalJSX.TablerCheckbox & JSXBase.HTMLAttributes<HTMLTablerCheckboxElement>;
         }

@@ -27,7 +27,9 @@
     "ge": "stencil build --watch"
   },
   "dependencies": {
-    "@stencil/core": "^2.18.0"
+    "@stencil/core": "^2.18.0",
+    "@stencil/state-tunnel": "^1.0.1",
+    "classnames": "^2.3.2"
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.3.1",
