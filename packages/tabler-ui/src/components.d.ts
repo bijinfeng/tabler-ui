@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BadgetColor } from "./components/badge/types";
+import { SwitchSize } from "./components/switch/types";
 export namespace Components {
     interface ConfigProvider {
         "prefixCls": string;
@@ -67,6 +68,22 @@ export namespace Components {
         "checked": boolean;
         "disabled": boolean;
         "label": string;
+        "prefixCls": string;
+    }
+    interface TablerSwitch {
+        /**
+          * 打开状态的受控值
+         */
+        "checked": boolean;
+        /**
+          * 不可用状态
+         */
+        "disabled": boolean;
+        "prefixCls": string;
+        /**
+          * 开关尺寸
+         */
+        "size": SwitchSize;
     }
 }
 declare global {
@@ -94,11 +111,18 @@ declare global {
         prototype: HTMLTablerCheckboxElement;
         new (): HTMLTablerCheckboxElement;
     };
+    interface HTMLTablerSwitchElement extends Components.TablerSwitch, HTMLStencilElement {
+    }
+    var HTMLTablerSwitchElement: {
+        prototype: HTMLTablerSwitchElement;
+        new (): HTMLTablerSwitchElement;
+    };
     interface HTMLElementTagNameMap {
         "config-provider": HTMLConfigProviderElement;
         "tabler-badge": HTMLTablerBadgeElement;
         "tabler-button": HTMLTablerButtonElement;
         "tabler-checkbox": HTMLTablerCheckboxElement;
+        "tabler-switch": HTMLTablerSwitchElement;
     }
 }
 declare namespace LocalJSX {
@@ -162,12 +186,29 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "disabled"?: boolean;
         "label"?: string;
+        "prefixCls"?: string;
+    }
+    interface TablerSwitch {
+        /**
+          * 打开状态的受控值
+         */
+        "checked"?: boolean;
+        /**
+          * 不可用状态
+         */
+        "disabled"?: boolean;
+        "prefixCls"?: string;
+        /**
+          * 开关尺寸
+         */
+        "size"?: SwitchSize;
     }
     interface IntrinsicElements {
         "config-provider": ConfigProvider;
         "tabler-badge": TablerBadge;
         "tabler-button": TablerButton;
         "tabler-checkbox": TablerCheckbox;
+        "tabler-switch": TablerSwitch;
     }
 }
 export { LocalJSX as JSX };
@@ -178,6 +219,7 @@ declare module "@stencil/core" {
             "tabler-badge": LocalJSX.TablerBadge & JSXBase.HTMLAttributes<HTMLTablerBadgeElement>;
             "tabler-button": LocalJSX.TablerButton & JSXBase.HTMLAttributes<HTMLTablerButtonElement>;
             "tabler-checkbox": LocalJSX.TablerCheckbox & JSXBase.HTMLAttributes<HTMLTablerCheckboxElement>;
+            "tabler-switch": LocalJSX.TablerSwitch & JSXBase.HTMLAttributes<HTMLTablerSwitchElement>;
         }
     }
 }

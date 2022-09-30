@@ -45,8 +45,17 @@ export const TablerButton = /*@__PURE__*/ defineContainer<JSX.TablerButton>('tab
 
 
 export const TablerCheckbox = /*@__PURE__*/ defineContainer<JSX.TablerCheckbox>('tabler-checkbox', undefined, [
+  'prefixCls',
   'checked',
   'disabled',
   'label'
+]);
+
+
+export const TablerSwitch = /*@__PURE__*/ defineContainer<JSX.TablerSwitch>('tabler-switch', undefined, [
+  'prefixCls',
+  'checked',
+  'disabled',
+  'size'
 ]);
 

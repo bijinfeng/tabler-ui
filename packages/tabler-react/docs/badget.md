@@ -2,9 +2,9 @@
 title: Badge 徽标
 ---
 
-# Badge 徽标
+## Badge 徽标
 
-## Default markup
+### Default markup
 
 ```jsx
 import React from 'react';
@@ -30,7 +30,7 @@ export default () => {
 };
 ```
 
-## Outline badges
+### Outline badges
 
 ```jsx
 import React from 'react';
@@ -80,7 +80,7 @@ export default () => {
 };
 ```
 
-## Pill badges
+### Pill badges
 
 ```jsx
 import React from 'react';
@@ -130,7 +130,7 @@ export default () => {
 };
 ```
 
-## Soft color badges
+### Soft color badges
 
 ```jsx
 import React from 'react';
@@ -180,7 +180,7 @@ export default () => {
 };
 ```
 
-## Links
+### Links
 
 ```jsx
 import React from 'react';

@@ -1,0 +1,56 @@
+$base-cls: #{$prefix}switch;
+
+.#{$base-cls} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+
+  &_input {
+    cursor: pointer;
+    appearance: none;
+    margin: 0;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(97, 104, 118, 0.16);
+    width: 32px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23e6e7e9'/%3e%3c/svg%3e");
+    background-position: left center;
+    transition: background-color .3s,background-position .3s;
+    border-radius: 32px;
+  }
+
+  &_input:checked {
+    border: none;
+    background-color: $primary;
+    background-position: right center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+  }
+
+  &_input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2390b5e2'/%3e%3c/svg%3e");
+    border-color: #90b5e2;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(32 107 196 / 25%);
+  }
+
+  &_input:active {
+    filter: brightness(90%);
+  }
+
+  &_input:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+  }
+}
+
+.#{$base-cls}-lg {
+  .#{$base-cls}_input {
+    width: 44px;
+    height: 24px;
+  }
+}
