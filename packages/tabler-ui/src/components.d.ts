@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BadgetColor } from "./components/badge/types";
+import { Colors } from "./types";
+import { LoadingSize, LoadingType } from "./components/loading/index";
 import { SwitchSize } from "./components/switch/types";
 export namespace Components {
     interface ConfigProvider {
@@ -70,6 +72,28 @@ export namespace Components {
         "label": string;
         "prefixCls": string;
     }
+    interface TablerLoading {
+        /**
+          * 颜色
+         */
+        "color": Colors;
+        "prefixCls": string;
+        /**
+          * 大小
+         */
+        "size": LoadingSize;
+        /**
+          * 样式
+         */
+        "type": LoadingType;
+    }
+    interface TablerProgress {
+        /**
+          * 百分比
+         */
+        "percent": number;
+        "prefixCls": string;
+    }
     interface TablerSwitch {
         /**
           * 打开状态的受控值
@@ -111,6 +135,18 @@ declare global {
         prototype: HTMLTablerCheckboxElement;
         new (): HTMLTablerCheckboxElement;
     };
+    interface HTMLTablerLoadingElement extends Components.TablerLoading, HTMLStencilElement {
+    }
+    var HTMLTablerLoadingElement: {
+        prototype: HTMLTablerLoadingElement;
+        new (): HTMLTablerLoadingElement;
+    };
+    interface HTMLTablerProgressElement extends Components.TablerProgress, HTMLStencilElement {
+    }
+    var HTMLTablerProgressElement: {
+        prototype: HTMLTablerProgressElement;
+        new (): HTMLTablerProgressElement;
+    };
     interface HTMLTablerSwitchElement extends Components.TablerSwitch, HTMLStencilElement {
     }
     var HTMLTablerSwitchElement: {
@@ -122,6 +158,8 @@ declare global {
         "tabler-badge": HTMLTablerBadgeElement;
         "tabler-button": HTMLTablerButtonElement;
         "tabler-checkbox": HTMLTablerCheckboxElement;
+        "tabler-loading": HTMLTablerLoadingElement;
+        "tabler-progress": HTMLTablerProgressElement;
         "tabler-switch": HTMLTablerSwitchElement;
     }
 }
@@ -188,6 +226,28 @@ declare namespace LocalJSX {
         "label"?: string;
         "prefixCls"?: string;
     }
+    interface TablerLoading {
+        /**
+          * 颜色
+         */
+        "color"?: Colors;
+        "prefixCls"?: string;
+        /**
+          * 大小
+         */
+        "size"?: LoadingSize;
+        /**
+          * 样式
+         */
+        "type"?: LoadingType;
+    }
+    interface TablerProgress {
+        /**
+          * 百分比
+         */
+        "percent"?: number;
+        "prefixCls"?: string;
+    }
     interface TablerSwitch {
         /**
           * 打开状态的受控值
@@ -208,6 +268,8 @@ declare namespace LocalJSX {
         "tabler-badge": TablerBadge;
         "tabler-button": TablerButton;
         "tabler-checkbox": TablerCheckbox;
+        "tabler-loading": TablerLoading;
+        "tabler-progress": TablerProgress;
         "tabler-switch": TablerSwitch;
     }
 }
@@ -219,6 +281,8 @@ declare module "@stencil/core" {
             "tabler-badge": LocalJSX.TablerBadge & JSXBase.HTMLAttributes<HTMLTablerBadgeElement>;
             "tabler-button": LocalJSX.TablerButton & JSXBase.HTMLAttributes<HTMLTablerButtonElement>;
             "tabler-checkbox": LocalJSX.TablerCheckbox & JSXBase.HTMLAttributes<HTMLTablerCheckboxElement>;
+            "tabler-loading": LocalJSX.TablerLoading & JSXBase.HTMLAttributes<HTMLTablerLoadingElement>;
+            "tabler-progress": LocalJSX.TablerProgress & JSXBase.HTMLAttributes<HTMLTablerProgressElement>;
             "tabler-switch": LocalJSX.TablerSwitch & JSXBase.HTMLAttributes<HTMLTablerSwitchElement>;
         }
     }

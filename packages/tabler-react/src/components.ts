@@ -13,4 +13,6 @@ export const ContextConsumer = /*@__PURE__*/createReactComponent<JSX.ContextCons
 export const TablerBadge = /*@__PURE__*/createReactComponent<JSX.TablerBadge, HTMLTablerBadgeElement>('tabler-badge');
 export const TablerButton = /*@__PURE__*/createReactComponent<JSX.TablerButton, HTMLTablerButtonElement>('tabler-button');
 export const TablerCheckbox = /*@__PURE__*/createReactComponent<JSX.TablerCheckbox, HTMLTablerCheckboxElement>('tabler-checkbox');
+export const TablerLoading = /*@__PURE__*/createReactComponent<JSX.TablerLoading, HTMLTablerLoadingElement>('tabler-loading');
+export const TablerProgress = /*@__PURE__*/createReactComponent<JSX.TablerProgress, HTMLTablerProgressElement>('tabler-progress');
 export const TablerSwitch = /*@__PURE__*/createReactComponent<JSX.TablerSwitch, HTMLTablerSwitchElement>('tabler-switch');

@@ -27,6 +27,7 @@
     "ge": "stencil build --watch"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@stencil/core": "^2.18.0",
     "@stencil/state-tunnel": "^1.0.1",
     "classnames": "^2.3.2"

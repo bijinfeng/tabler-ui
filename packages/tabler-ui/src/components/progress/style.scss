@@ -1,0 +1,23 @@
+$base-cls: #{$prefix}progress;
+
+@keyframes progress-indeterminate {
+  0% {
+    right: 100%;
+    left: -35%;
+  }
+
+  100%,
+  60% {
+    right: -90%;
+    left: 100%;
+  }
+}
+
+.#{$base-cls} {
+  display: flex;
+  position: relative;
+  width: 100%;
+  appearance: none;
+  line-height: 8px;
+}
+
