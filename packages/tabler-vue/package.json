@@ -33,6 +33,6 @@
     "vue": "3"
   },
   "dependencies": {
-    "@kebai/tabler-ui": "^0.0.1"
+    "@kebai/tabler-ui": "workspace:^0.0.1"
   }
 }

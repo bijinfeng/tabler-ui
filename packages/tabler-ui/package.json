@@ -20,22 +20,21 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "dev": "stencil build --watch",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
-    "ge": "stencil build --watch"
+    "generate": "stencil generate"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "@stencil/core": "^2.18.0",
+    "@stencil/core": "^3.2.1",
     "@stencil/state-tunnel": "^1.0.1",
     "classnames": "^2.3.2"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "^0.3.1",
-    "@stencil/sass": "^2.0.0",
-    "@stencil/vue-output-target": "^0.6.2",
+    "@stencil/react-output-target": "^0.5.0",
+    "@stencil/sass": "^3.0.1",
+    "@stencil/vue-output-target": "^0.8.2",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",

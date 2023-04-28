@@ -9,6 +9,10 @@ import { BadgetColor } from "./components/badge/types";
 import { Colors } from "./types";
 import { LoadingSize, LoadingType } from "./components/loading/index";
 import { SwitchSize } from "./components/switch/types";
+export { BadgetColor } from "./components/badge/types";
+export { Colors } from "./types";
+export { LoadingSize, LoadingType } from "./components/loading/index";
+export { SwitchSize } from "./components/switch/types";
 export namespace Components {
     interface ConfigProvider {
         "prefixCls": string;

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "module": "commonjs",
     "declaration": true,
     "noImplicitAny": false,
@@ -7,6 +8,7 @@
     "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "target": "es6",
     "sourceMap": true,
     "lib": ["es6"],

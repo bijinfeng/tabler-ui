@@ -1,26 +1,28 @@
 module.exports = {
   types: [
-    { value: 'feat', name: 'feat:     A new feature' },
-    { value: 'fix', name: 'fix:      A bug fix' },
+    { value: 'feat', name: 'feat: 增加新功能' },
+    { value: 'fix', name: 'fix: 修复 bug' },
     {
       value: 'style',
-      name: 'style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)',
+      name: 'style: 不影响代码含义的改动，例如去掉空格、改变缩进、增删分号',
     },
     {
       value: 'refactor',
-      name: 'refactor: A code change that neither fixes a bug nor adds a feature',
+      name: 'refactor: 代码重构时使用，既不是新增功能也不是代码的bud修复',
     },
-    { value: 'revert', name: 'revert:   Revert to a commit' },
+    { value: 'revert', name: 'revert: 撤销某次提交' },
     {
       value: 'chore',
-      name: 'chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation',
+      name: 'chore: 杂项，其他不需要修改源代码或不需要修改测试代码的修改',
     },
-    { value: 'docs', name: 'docs:     Documentation only changes' },
+    { value: 'docs', name: 'docs: 只改动了文档相关的内容' },
+    { value: 'perf', name: 'perf: 提高性能的修改' },
+    { value: 'test', name: 'test: 添加或修改测试代码' },
+    { value: 'ci', name: 'ci: 持续集成的配置文件或者脚本的修改' },
     {
-      value: 'perf',
-      name: 'perf:     A code change that improves performance',
+      value: 'build',
+      name: 'build: 构建工具或者外部依赖包的修改，比如更新依赖包的版本',
     },
-    { value: 'test', name: 'test:     Adding missing tests' },
   ],
 
   scopes: [
