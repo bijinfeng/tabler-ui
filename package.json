@@ -19,7 +19,7 @@
     "dev": "dumi dev",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "build-repo": "pnpm --filter '@kebai/tabler-ui' build",
-    "build-doc": "npm -w run build-repo && dumi build"
+    "build-doc": "npm run build-repo && dumi build"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
