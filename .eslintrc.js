@@ -3,12 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb',
-    'prettier',
-    'plugin:import/typescript',
-    'plugin:storybook/recommended',
-  ],
+  extends: ['airbnb', 'prettier', 'plugin:import/typescript'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',

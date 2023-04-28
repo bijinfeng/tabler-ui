@@ -7,10 +7,8 @@ export const config: Config = {
   namespace: 'tabler',
   plugins: [
     sass({
-      injectGlobalPaths: [
-        'src/global/variables.scss',
-      ]
-    })
+      injectGlobalPaths: ['src/global/index.scss'],
+    }),
   ],
   outputTargets: [
     reactOutputTarget({
@@ -29,7 +27,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      dir: "./dist/custom-elements"
+      dir: './dist/custom-elements',
     },
   ],
 };
