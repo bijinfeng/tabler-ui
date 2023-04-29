@@ -7,3 +7,4 @@ docs-dist
 storybook-static
 .dumi
 .eslintcache
+docs/.vitepress/cache
