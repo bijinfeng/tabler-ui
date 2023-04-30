@@ -5,5 +5,6 @@ packages/*/lib
 dist
 docs-dist
 storybook-static
-.dumi
+.dumi/tmp
+.dumi/tmp-production
 .eslintcache

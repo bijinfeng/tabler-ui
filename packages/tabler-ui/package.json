@@ -16,14 +16,20 @@
   },
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "style"
   ],
   "scripts": {
-    "build": "stencil build",
-    "dev": "stencil build --watch",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "build": "NODE_ENV=production run-s clean build:tailwind build:stencil",
+    "start": "NODE_ENV=development npm-run-all clean -p dev:*",
+    "clean": "rm -rf www",
+    "dev:stencil": "stencil build --dev --watch --serve",
+    "dev:tailwind": "tailwindcss -i ./src/tailwind.pcss -o ./style/global.css --watch",
+    "build:stencil": "stencil build",
+    "build:tailwind": "tailwindcss -i ./src/tailwind.pcss -o ./style/global.css --minify"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
@@ -33,7 +39,6 @@
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.5.0",
-    "@stencil/sass": "^3.0.1",
     "@stencil/vue-output-target": "^0.8.2",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",

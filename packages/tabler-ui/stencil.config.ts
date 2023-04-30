@@ -1,15 +1,10 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
-import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'tabler',
-  plugins: [
-    sass({
-      injectGlobalPaths: ['src/global/index.scss'],
-    }),
-  ],
+  globalStyle: 'style/global.css',
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@kebai/tabler-ui',

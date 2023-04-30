@@ -1,1 +1,1 @@
-## tabler-react
+## tabler

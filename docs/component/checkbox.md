@@ -9,12 +9,12 @@ nav: 组件
 
 ```jsx
 import React from 'react';
-import { Checkbox } from '@kebai/tabler-react';
+import { TablerCheckbox } from '@kebai/tabler-react';
 
 export default () => {
   return (
     <div style={{ display: 'flex', gap: 5 }}>
-      <Checkbox />
+      <TablerCheckbox />
     </div>
   );
 };

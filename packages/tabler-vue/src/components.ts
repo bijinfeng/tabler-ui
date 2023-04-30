@@ -20,56 +20,8 @@ export const ContextConsumer = /*@__PURE__*/ defineContainer<JSX.ContextConsumer
 ]);
 
 
-export const TablerBadge = /*@__PURE__*/ defineContainer<JSX.TablerBadge>('tabler-badge', undefined, [
-  'prefixCls',
-  'color',
-  'outline',
-  'pill',
-  'light',
-  'href',
-  'target'
-]);
+export const TablerCheckbox = /*@__PURE__*/ defineContainer<JSX.TablerCheckbox>('tabler-checkbox', undefined);
 
 
-export const TablerButton = /*@__PURE__*/ defineContainer<JSX.TablerButton>('tabler-button', undefined, [
-  'type',
-  'plain',
-  'round',
-  'icon',
-  'circle',
-  'disabled',
-  'size',
-  'block',
-  'loading'
-]);
-
-
-export const TablerCheckbox = /*@__PURE__*/ defineContainer<JSX.TablerCheckbox>('tabler-checkbox', undefined, [
-  'prefixCls',
-  'checked',
-  'disabled',
-  'label'
-]);
-
-
-export const TablerLoading = /*@__PURE__*/ defineContainer<JSX.TablerLoading>('tabler-loading', undefined, [
-  'prefixCls',
-  'color',
-  'type',
-  'size'
-]);
-
-
-export const TablerProgress = /*@__PURE__*/ defineContainer<JSX.TablerProgress>('tabler-progress', undefined, [
-  'prefixCls',
-  'percent'
-]);
-
-
-export const TablerSwitch = /*@__PURE__*/ defineContainer<JSX.TablerSwitch>('tabler-switch', undefined, [
-  'prefixCls',
-  'checked',
-  'disabled',
-  'size'
-]);
+export const TablerToast = /*@__PURE__*/ defineContainer<JSX.TablerToast>('tabler-toast', undefined);
 
