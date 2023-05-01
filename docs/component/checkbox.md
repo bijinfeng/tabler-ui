@@ -12,9 +12,13 @@ import React from 'react';
 import { TablerCheckbox } from '@kebai/tabler-react';
 
 export default () => {
+  const onChange = (e) => {
+    console.log(e);
+  };
+
   return (
     <div style={{ display: 'flex', gap: 5 }}>
-      <TablerCheckbox />
+      <TablerCheckbox onChange={onChange}>Checkbox input</TablerCheckbox>
     </div>
   );
 };

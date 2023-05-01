@@ -20,7 +20,11 @@ export const ContextConsumer = /*@__PURE__*/ defineContainer<JSX.ContextConsumer
 ]);
 
 
-export const TablerCheckbox = /*@__PURE__*/ defineContainer<JSX.TablerCheckbox>('tabler-checkbox', undefined);
+export const TablerCheckbox = /*@__PURE__*/ defineContainer<JSX.TablerCheckbox>('tabler-checkbox', undefined, [
+  'checked',
+  'disabled',
+  'change'
+]);
 
 
 export const TablerToast = /*@__PURE__*/ defineContainer<JSX.TablerToast>('tabler-toast', undefined);

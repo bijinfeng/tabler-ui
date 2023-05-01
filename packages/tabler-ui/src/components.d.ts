@@ -10,9 +10,15 @@ export namespace Components {
         "prefixCls": string;
     }
     interface TablerCheckbox {
+        "checked": boolean;
+        "disabled": boolean;
     }
     interface TablerToast {
     }
+}
+export interface TablerCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTablerCheckboxElement;
 }
 declare global {
     interface HTMLConfigProviderElement extends Components.ConfigProvider, HTMLStencilElement {
@@ -44,6 +50,9 @@ declare namespace LocalJSX {
         "prefixCls"?: string;
     }
     interface TablerCheckbox {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "onChange"?: (event: TablerCheckboxCustomEvent<boolean>) => void;
     }
     interface TablerToast {
     }
